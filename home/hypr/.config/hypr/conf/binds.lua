@@ -43,10 +43,10 @@ for _, dir in ipairs({ "left", "right", "up", "down" }) do
     hl.bind(shift(dir), hl.dsp.window.move({ direction = dir }))
 end
 local step = 60
-hl.bind(ctrl("left"),  hl.dsp.window.resize({ x = -step, y = 0 }))
-hl.bind(ctrl("right"), hl.dsp.window.resize({ x =  step, y = 0 }))
-hl.bind(ctrl("up"),    hl.dsp.window.resize({ x = 0, y = -step }))
-hl.bind(ctrl("down"),  hl.dsp.window.resize({ x = 0, y =  step }))
+hl.bind(ctrl("left"),  hl.dsp.window.resize({ x = -60, y = 0, relative = true }))
+hl.bind(ctrl("right"), hl.dsp.window.resize({ x = 60, y = 0, relative = true }))
+hl.bind(ctrl("up"),    hl.dsp.window.resize({ x = 0, y = -60, relative = true }))
+hl.bind(ctrl("down"),  hl.dsp.window.resize({ x = 0, y = 60, relative = true }))
 
 -- Écrans (utile avec le 2e écran)
 hl.bind(alt("left"),   hl.dsp.focus({ monitor = "-" }))
