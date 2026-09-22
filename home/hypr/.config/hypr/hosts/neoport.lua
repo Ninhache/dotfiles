@@ -4,7 +4,10 @@ return {
     -- Penser aussi à mkinitcpio (étape 5) : les deux vont ensemble.
     gpu = "intel",
 
-    -- À remplir à l'étape 4 si le 2e écran est câblé sur la Quadro.
+    -- Ports vidéo externes câblés sur la Quadro (card0-DP-3/4/5), écran interne sur l'Intel.
+    -- Le multi-GPU par défaut de Hyprland fonctionne (testé 09/2026) : pas besoin d'AQ_DRM_DEVICES.
+    -- Si besoin un jour : règle udev (liens /dev/dri/intel-igpu, nvidia-dgpu) +
+    -- drm_devices = "/dev/dri/intel-igpu:/dev/dri/nvidia-dgpu"
     drm_devices = nil,
 
     monitors = {
