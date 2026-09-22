@@ -114,7 +114,7 @@ python-pipx
 python-psycopg2
 python-requests
 python-tabulate
-qemu-full
+qemu-desktop
 sbt
 slurp
 starship
