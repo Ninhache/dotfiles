@@ -1,0 +1,12 @@
+# Services système activés par bootstrap.sh sur toutes les machines
+NetworkManager.service
+iwd.service
+systemd-resolved.service
+systemd-timesyncd.service
+bluetooth.service
+avahi-daemon.service
+cups.socket
+docker.service
+libvirtd.socket
+fstrim.timer
+paccache.timer

@@ -1,0 +1,16 @@
+antigravity
+bruno
+downgrade
+dracula-gtk-theme
+dracula-icons-git
+epson-inkjet-printer-escpr
+fx_cast-bin
+intellij-idea-ultimate-edition-jre
+minecraft-launcher
+playwright
+slack-desktop
+swaylock-effects
+tmux-git
+visual-studio-code-bin
+wlogout
+wrk

@@ -1,0 +1,5 @@
+# Services propres au P51
+tlp.service
+nvidia-suspend.service
+nvidia-resume.service
+nvidia-hibernate.service

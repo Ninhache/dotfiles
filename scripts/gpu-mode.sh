@@ -40,6 +40,8 @@ echo "→ Régénération de l'initramfs"
 sudo mkinitcpio -P
 
 echo
+"$(dirname "$0")/sys-sync.sh" pull
+echo
 echo "Fait. Vérification :"
 grep '^MODULES=' "$MKINIT"
 grep -E '^\s*gpu\s*=' "$HOST_FILE"
