@@ -1,0 +1,9 @@
+# Filet de sécurité : ces fichiers ne doivent jamais entrer, même par erreur
+*.bak
+*.old
+.env*
+*.key
+*.pem
+id_*
+hosts.yml
+.git-credentials
