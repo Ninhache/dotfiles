@@ -28,3 +28,14 @@ hl.window_rule({
     float = true,
     center = true,
 })
+
+-- Terminal escamotable (SUPER + T)
+hl.window_rule({
+    name = "scratchpad-term",
+    match = { class = "^(scratchpad)$" },
+    workspace = "special:term",
+})
+
+-- Flou derrière la barre et le lanceur
+hl.layer_rule({ name = "blur-waybar", match = { namespace = "^waybar$" }, blur = true, ignore_alpha = 0.3 })
+hl.layer_rule({ name = "blur-wofi",   match = { namespace = "^wofi$" },   blur = true, ignore_alpha = 0.3 })

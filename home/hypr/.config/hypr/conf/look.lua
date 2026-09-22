@@ -48,3 +48,6 @@ hl.animation({ leaf = "layers",     enabled = true, speed = 3.81, bezier = "ease
 hl.animation({ leaf = "windows",    enabled = true, speed = 3,    spring = "easy" })
 hl.animation({ leaf = "windowsIn",  enabled = true, speed = 2.5,  spring = "easy", style = "popin 87%" })
 hl.animation({ leaf = "fade",       enabled = true, speed = 2,    bezier = "quick" })
+
+-- Coins arrondis
+hl.config({ decoration = { rounding = 0 } })
