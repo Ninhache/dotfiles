@@ -137,9 +137,6 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-# cabal
-export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
-
 # flutter
 export PATH="$HOME/flutter/bin:$PATH"
 # pub dart
