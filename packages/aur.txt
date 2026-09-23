@@ -1,5 +1,4 @@
 antigravity
-bruno
 downgrade
 dracula-gtk-theme
 dracula-icons-git

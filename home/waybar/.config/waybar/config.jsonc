@@ -2,7 +2,7 @@
   "layer": "top",
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["mpris"],
-  "modules-right": ["tray", "backlight", "pulseaudio", "clock", "network", "battery"],
+  "modules-right": ["tray", "custom/updates", "idle_inhibitor", "bluetooth", "backlight", "pulseaudio", "clock", "network", "battery"],
   "tray": { "icon-size": 16, "spacing": 8 },
   "hyprland/workspaces": {
     "format": "{name}",
@@ -23,6 +23,19 @@
     "on-click-middle": "~/.config/hypr/scripts/now-playing.sh",
     "on-scroll-up": "playerctl next",
     "on-scroll-down": "playerctl previous"
+  },
+  "idle_inhibitor": {
+    "format": "<span color='#b4befe'>{icon}</span>",
+    "format-icons": { "activated": "ON", "deactivated": "OFF" },
+    "tooltip-format-activated": "Veille bloquée",
+    "tooltip-format-deactivated": "Veille automatique active"
+  },
+  "custom/updates": {
+    "exec": "~/.config/waybar/scripts/updates.sh",
+    "return-type": "json",
+    "interval": 1800,
+    "format": "<span color='#b4befe'></span> {}",
+    "on-click": "kitty --hold -e yay -Syu"
   },
   "clock": {
     "format": "<span color='#b4befe'> </span>{:%H:%M}"
@@ -50,7 +63,6 @@
     "tooltip-format-enumerate-connected": "{device_alias}   {device_address}"
   },
   "network": {
-    "interface": "wlan0",
     "format": "{ifname}",
     "format-wifi": "<span color='#b4befe'> </span> {essid}",
     "format-ethernet": "{ipaddr}/{cidr} ",
