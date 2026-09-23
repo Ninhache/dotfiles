@@ -18,7 +18,8 @@
     "dynamic-order": ["title", "artist"],
     "player-icons": { "default": "F04b" },
     "status-icons": { "paused": "F04c" },
-    "on-click": "playerctl play-pause",
+    "on-click": "eww open --toggle music",
+    "on-click-middle": "playerctl play-pause",
     "on-click-middle": "~/.config/hypr/scripts/now-playing.sh",
     "on-scroll-up": "playerctl next",
     "on-scroll-down": "playerctl previous"

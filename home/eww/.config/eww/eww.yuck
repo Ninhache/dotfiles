@@ -1,0 +1,33 @@
+;; Bulle "lecture en cours" — ouverte depuis waybar ou SUPER+ALT+M
+
+(deflisten player
+  :initial '{"status":"Stopped","title":"Rien en lecture","artist":"","album":"","art":"","position":0,"length":1,"pos_str":"0:00","len_str":"0:00"}'
+  "python3 ~/.config/eww/scripts/player.py")
+
+(defwidget music []
+  (eventbox :onhoverlost "eww close music"
+    (box :class "music" :orientation "h" :space-evenly false :spacing 16
+      (box :class "cover" :visible {player.art != ""} :space-evenly false
+        (image :path {player.art} :image-width 110 :image-height 110))
+      (box :orientation "v" :space-evenly false :hexpand true :spacing 4
+        (label :class "title"  :halign "start" :limit-width 34 :text {player.title})
+        (label :class "artist" :halign "start" :limit-width 40
+               :text {player.artist == "" ? "" : player.artist + "  ·  " + player.album})
+        (scale :class "bar" :min 0 :max 100 :active {player.status != "Stopped"}
+               :value {player.position * 100.0 / player.length}
+               :onchange "~/.config/eww/scripts/seek.sh {} ${player.length}")
+        (box :orientation "h" :space-evenly false :spacing 14
+          (label :class "time" :text "${player.pos_str} / ${player.len_str}")
+          (box :class "controls" :halign "end" :hexpand true :space-evenly false :spacing 12
+            (button :onclick "playerctl previous" "")
+            (button :class "play" :onclick "playerctl play-pause"
+                    {player.status == "Playing" ? "" : ""})
+            (button :onclick "playerctl next" "")
+            (button :class "close" :onclick "eww close music" "")))))))
+
+(defwindow music
+  :monitor 0
+  :geometry (geometry :x "0px" :y "12px" :anchor "top center" :width "460px")
+  :stacking "overlay"
+  :focusable false
+  (music))

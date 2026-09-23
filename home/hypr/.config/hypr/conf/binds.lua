@@ -84,3 +84,6 @@ hl.bind("XF86AudioPrev",         hl.dsp.exec_cmd("playerctl previous"),   { lock
 -- Audio
 hl.bind(mod .. " + ALT + S", hl.dsp.exec_cmd("~/.config/hypr/scripts/audio-out.sh"))
 hl.bind(mod .. " + ALT + B", hl.dsp.exec_cmd("~/.config/hypr/scripts/bt-audio.sh menu"))
+
+-- Bulle "lecture en cours"
+hl.bind(mod .. " + ALT + M", hl.dsp.exec_cmd("eww open --toggle music"))
