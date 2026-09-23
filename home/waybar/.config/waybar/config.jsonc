@@ -10,6 +10,8 @@
     "all-outputs": true
   },
   "mpris": {
+    "interval": 1,
+    "tooltip-format": "{player}\n{title}\n{artist} · {album}\n{position} / {length}",
     "format": "<span color='#b4befe'>{player_icon}</span> {dynamic}",
     "format-paused": "<span color='#b4befe'>{status_icon}</span> <i>{dynamic}</i>",
     "dynamic-len": 40,
@@ -17,6 +19,7 @@
     "player-icons": { "default": "F04b" },
     "status-icons": { "paused": "F04c" },
     "on-click": "playerctl play-pause",
+    "on-click-middle": "~/.config/hypr/scripts/now-playing.sh",
     "on-scroll-up": "playerctl next",
     "on-scroll-down": "playerctl previous"
   },
