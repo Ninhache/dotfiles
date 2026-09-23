@@ -13,9 +13,5 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[url "git@git.pit-fabrik.fr:"]
-	insteadOf = https://git.pit-fabrik.fr/
-[url "git@github.com:"]
-	insteadOf = https://github.com/
 [include]
 	path = ~/.gitconfig.local

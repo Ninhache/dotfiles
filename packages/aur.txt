@@ -14,3 +14,4 @@ tmux-git
 visual-studio-code-bin
 wlogout
 wrk
+psst-git

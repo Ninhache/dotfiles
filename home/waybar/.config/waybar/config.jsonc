@@ -1,13 +1,24 @@
 {
   "layer": "top",
   "modules-left": ["hyprland/workspaces"],
-  "modules-center": [],
+  "modules-center": ["mpris"],
   "modules-right": ["tray", "backlight", "pulseaudio", "clock", "network", "battery"],
   "tray": { "icon-size": 16, "spacing": 8 },
   "hyprland/workspaces": {
     "format": "{name}",
     "tooltip": false,
     "all-outputs": true
+  },
+  "mpris": {
+    "format": "<span color='#b4befe'>{player_icon}</span> {dynamic}",
+    "format-paused": "<span color='#b4befe'>{status_icon}</span> <i>{dynamic}</i>",
+    "dynamic-len": 40,
+    "dynamic-order": ["title", "artist"],
+    "player-icons": { "default": "F04b" },
+    "status-icons": { "paused": "F04c" },
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
   },
   "clock": {
     "format": "<span color='#b4befe'> </span>{:%H:%M}"
