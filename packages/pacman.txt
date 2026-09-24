@@ -93,10 +93,6 @@ os-prober
 pamixer
 patchelf
 pavucontrol
-php
-php-gd
-php-sodium
-php-sqlite
 pipewire
 pipewire-alsa
 pipewire-jack
