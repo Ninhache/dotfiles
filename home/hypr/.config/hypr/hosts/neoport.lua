@@ -2,7 +2,7 @@
 return {
     -- Passer à "nvidia" réactive les variables d'env NVIDIA (voir conf/env.lua).
     -- Penser aussi à mkinitcpio (étape 5) : les deux vont ensemble.
-    gpu = "intel",
+    gpu = "nvidia",
 
     -- Ports vidéo externes câblés sur la Quadro (card0-DP-3/4/5), écran interne sur l'Intel.
     -- Le multi-GPU par défaut de Hyprland fonctionne (testé 09/2026) : pas besoin d'AQ_DRM_DEVICES.
@@ -13,6 +13,8 @@ return {
     monitors = {
         { output = "eDP-1", mode = "1920x1080@60", position = "0x0", scale = 1 },
         -- Tout autre écran : résolution préférée, placé à droite de l'écran interne
+        -- Samsung 27" : 100 Hz, la dalle le supporte
+        { output = "DP-4",  mode = "1920x1080@100", position = "1920x0", scale = 1 },
         { output = "",      mode = "preferred",    position = "auto-right", scale = 1 },
     },
 }
